@@ -1,5 +1,5 @@
 language: python
-dist: xenial  # required for Python >= 3.7
+dist: xenial
 python:
 - '3.5'
 - '3.6'
@@ -10,3 +10,12 @@ install:
 script:
 - coverage run --source=animelyrics setup.py test
 - coveralls
+deploy:
+  provider: pypi
+  user: colorfusion
+  on:
+    tags: true
+    branch: master
+    python: '3.6'
+  password:
+    secure: tAEteAT4jPopvnBrAhm9L5Kj6GiRMCShhdlY21jRO9S7HrLTHyCIvl+zEue/AZgBuXMz0aQifwJarVoMEB5IxGhFOFcINtatjWhDjZoQVhO0R21J/p6ej/WW4Wg8+AFKcejFUo+pSAdY6vpUBtCceD5QY9htWCfgOMUiSUTCfy0w/Vqo0aQbODNc33Wym/q11UI3Iuua0lt9Xcnxkw0UrBI2KYaBx2df20ELfopmEG/TnXCS1wKwt6SdZiMewEFh7Z1QLWQee6vIcyK4v/C3ELbmdqLezv9wmI3YZosuVRaF8hAhuybdFMj6Z/WqgvJu4pYo8DkAXjH/yMw6FzdCkBK3IELrvB8hlBavUEHJh/OryD7rSYtelxTbxDVYstE6YMe7uTPaaedXc5yc7cZaNA6MqSyv0yz+yJiIQwrLpI0zPNmMCIRRiGRG6Xpn3w3DI+Kks2dW33B7PQn5181ZsS5aPVLzhdPEyDkcRfetydoEymSI26jhTnGplQlS9rxDmfh+929xk2fjuDyIV8tww9HWCDeKVp9SuO2kBBAMf1KZEpJnFX5qRHLl8t5BlrXqT10pId1ZITrKZr984UC7pykIW0hJRVJJpSYaj/mKWo6M4wFTDZY62Np4C0OrlUZJL9iRu9//BwdGbJVoXo+X9d33i0PZaHrQJCHMctJqUmc=
