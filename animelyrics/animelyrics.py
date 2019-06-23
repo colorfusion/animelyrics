@@ -107,9 +107,12 @@ def get_lyrics_soup(url):
     for line_break in soup.find_all("br"):
         line_break.replace_with("\n")
 
-    # remove all dt (term) tags in the page
-    for term in soup.find_all("dt"):
-        term.decompose()
+    # remove all unwanted tags in the page
+    tags_to_remove = ["dt", "sup"]
+
+    for tag_name in tags_to_remove:
+        for tag in soup.find_all(tag_name):
+            tag.decompose()
 
     return soup
 
