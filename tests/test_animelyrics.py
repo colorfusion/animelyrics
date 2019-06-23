@@ -30,9 +30,6 @@ def test_get_lyrics_soup():
     soup = animelyrics.get_lyrics_soup(__RENAI_CIRCULATION_URL__)
     assert type(soup) is BeautifulSoup
 
-    empty_url_soup = animelyrics.get_lyrics_soup("")
-    assert type(empty_url_soup) is BeautifulSoup
-
 
 def test_get_song_info():
     soup = animelyrics.get_lyrics_soup(__RENAI_CIRCULATION_URL__)
