@@ -70,6 +70,12 @@ def search_lyrics(query, lang="jp", show_title=False):
 
     if show_title:
         song_name, anime_name = get_song_info(soup)
+
+        # song name might be english
+        # set index to japanese name if english name not found
+        if lang == "en" and len(song_name) == 1:
+            song_idx = 1
+
         return "{} - {}\n\n{}".format(song_name[song_idx], anime_name, lyrics)
     else:
         return lyrics
