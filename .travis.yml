@@ -1,8 +1,6 @@
 language: python
 dist: xenial  # required for Python >= 3.7
 python:
-- "3.0"
-- "3.3"
 - '3.5'
 - '3.6'
 - '3.7'
