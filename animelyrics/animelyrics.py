@@ -43,7 +43,7 @@ def search_lyrics(query, lang="jp", show_title=False):
     url = get_lyrics_url(query)
 
     if url is None:
-        return "No results found"
+        return None
 
     soup = get_lyrics_soup(url)
 
