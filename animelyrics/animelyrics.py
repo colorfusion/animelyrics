@@ -13,7 +13,7 @@ class MissingTranslatedLyrics(Exception):
     pass
 
 
-class InvalidLanguage(Exception):
+class InvalidLanguage(ValueError):
     """Exception class to handle invalid language selection"""
 
     pass
