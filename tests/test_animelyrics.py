@@ -62,7 +62,12 @@ def test_search_lyrics():
 
     # check song that does not have english translation
     with pytest.raises(MissingTranslatedLyrics):
-        lyrics = animelyrics.search_lyrics("kokoro no kagi", lang="en")
+        animelyrics.search_lyrics("kokoro no kagi", lang="en")
+
+    # check lyrics for song with only japanese text
+    lyrics = animelyrics.search_lyrics("kokoro no kagi")
+    assert lyrics.splitlines()[0] == "Tsuki ni yureteiru boku tachi no miraizu ni"
+    assert lyrics.splitlines()[-1] == "Zutto daite"
 
     # check whether renai circulation lyrics is correct
     lyrics = animelyrics.search_lyrics("renai circulation")
