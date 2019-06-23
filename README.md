@@ -1,6 +1,6 @@
 # animelyrics
 
-[![Build Status](https://travis-ci.com/colorfusion/animelyrics.svg?branch=master)](https://travis-ci.com/colorfusion/animelyrics) [![Coverage Status](https://coveralls.io/repos/github/colorfusion/animelyrics/badge.svg?branch=master)](https://coveralls.io/github/colorfusion/animelyrics?branch=master) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black) [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+[![Build Status](https://travis-ci.com/colorfusion/animelyrics.svg?branch=master)](https://travis-ci.com/colorfusion/animelyrics) [![Coverage Status](https://coveralls.io/repos/github/colorfusion/animelyrics/badge.svg?branch=master)](https://coveralls.io/github/colorfusion/animelyrics?branch=master) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black) [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 >Python API to retrieve song lyrics from [animelyrics](https://www.animelyrics.com).
 
