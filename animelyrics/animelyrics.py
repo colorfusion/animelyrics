@@ -49,9 +49,6 @@ def search_lyrics(query, lang="jp", show_title=False):
 
     url = get_lyrics_url(query)
 
-    if url is None:
-        raise NoLyricsFound()
-
     soup = get_lyrics_soup(url)
 
     center_box = soup.find("div", {"class": "centerbox"})
@@ -146,4 +143,5 @@ def get_lyrics_url(query):
             return url
 
     # return none if query cannot find any pages
-    return None
+    raise NoLyricsFound
+
