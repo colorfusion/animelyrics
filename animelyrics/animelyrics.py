@@ -65,11 +65,12 @@ def search_lyrics(query, lang="jp", show_title=False):
     else:
         lyrics_divs = lyrics_table.find_all("td", {"class": class_name})
         for div in lyrics_divs:
-            print(div)
+            lyrics += div.get_text()
+
 
     if show_title:
         song_name, anime_name = get_song_info(soup)
-        return "{} - {}\n{}".format(song_name[song_idx], anime_name, lyrics)
+        return "{} - {}\n\n{}".format(song_name[song_idx], anime_name, lyrics)
     else:
         return lyrics
 
