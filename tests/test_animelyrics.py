@@ -14,12 +14,12 @@ __FAIRY_TAIL_URL___ = "https://www.animelyrics.com/anime/fairytail/kokoronokagi.
 
 def test_get_lyrics_url():
     # empty string check
-    no_url = animelyrics.get_lyrics_url("")
-    assert no_url is None
+    with pytest.raises(NoLyricsFound):
+        animelyrics.get_lyrics_url("")
 
     # invalid search string check
-    garbage_url = animelyrics.get_lyrics_url("omgwtfbbq")
-    assert garbage_url is None
+    with pytest.raises(NoLyricsFound):
+        animelyrics.get_lyrics_url("omgwtfbbq")
 
     # proper search string check
     renai_circulation_url = animelyrics.get_lyrics_url("renai circulation")
