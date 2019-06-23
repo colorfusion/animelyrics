@@ -60,7 +60,7 @@ def search_lyrics(query, lang="jp", show_title=False):
 
     if lyrics_table is None:
         if lang == "en":
-            return MissingTranslatedLyrics("No translated lyrics found")
+            raise MissingTranslatedLyrics("No translated lyrics found")
 
         lyrics = center_box.find("span", {"class": "lyrics"}).get_text()
     else:
