@@ -65,8 +65,8 @@ def search_lyrics(query, lang="jp", show_title=False):
         for div in lyrics_divs:
             lyrics += div.get_text()
 
-    # remove trailing spaces
-    lyrics = lyrics.strip()
+    # remove trailing spaces and weird space
+    lyrics = lyrics.replace("\xa0", " ").strip()
 
     # remove whitespaces from each line
     stripped_lines = [line.strip() for line in lyrics.splitlines()]
