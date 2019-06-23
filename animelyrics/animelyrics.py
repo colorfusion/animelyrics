@@ -78,7 +78,7 @@ def search_lyrics(query, lang="jp", show_title=False):
         # song name might be english
         # set index to japanese name if english name not found
         if lang == "en" and len(song_name) == 1:
-            song_idx = 1
+            song_idx = 0
 
         return "{} - {}\n\n{}".format(song_name[song_idx], anime_name, lyrics)
     else:
