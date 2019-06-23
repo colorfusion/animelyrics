@@ -81,7 +81,7 @@ def test_search_lyrics():
 
     # test songs with english translation
     lyrics = animelyrics.search_lyrics("god knows", lang="en")
-    assert lyrics.splitlines()[6] == "I face your back and leave without turning back. "
+    assert lyrics.splitlines()[6] == "I face your back and leave without turning back."
     assert (
         lyrics.splitlines()[-16]
         == "Become strong and you might even be able to change fate, you know."
