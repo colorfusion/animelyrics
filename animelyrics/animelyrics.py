@@ -6,9 +6,12 @@ import googlesearch
 
 __BASE_URL__ = "www.animelyrics.com"
 
+
 class InvalidLanguage(Exception):
     """Exception class to handle invalid language selection"""
+
     pass
+
 
 def search_lyrics(query, lang="jp", show_title=False):
     """
@@ -57,6 +60,7 @@ def search_lyrics(query, lang="jp", show_title=False):
         return "{} - {}\n{}".format(song_name[song_idx], anime_name, lyrics)
     else:
         return lyrics
+
 
 def get_song_info(soup):
     """
@@ -114,9 +118,3 @@ def get_lyrics_url(query):
 
     # return none if query cannot find any pages
     return None
-
-
-try :
-    print(search_lyrics("yuunagi", "lol"))
-except InvalidLanguage as e:
-    print(e)
