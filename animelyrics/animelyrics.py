@@ -1,8 +1,9 @@
 # coding: utf-8
-from bs4 import BeautifulSoup
 from urllib.parse import urlparse
-import requests
+
 import googlesearch
+import requests
+from bs4 import BeautifulSoup
 
 __BASE_URL__ = "www.animelyrics.com"
 
