@@ -67,6 +67,12 @@ def search_lyrics(query, lang="jp", show_title=False):
         for div in lyrics_divs:
             lyrics += div.get_text()
 
+    # remove trailing spaces
+    lyrics = lyrics.strip()
+
+    # remove whitespaces from each line
+    stripped_lines = [line.strip() for line in lyrics.splitlines()]
+    lyrics = "\n".join(stripped_lines)
 
     if show_title:
         song_name, anime_name = get_song_info(soup)
