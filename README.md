@@ -38,8 +38,8 @@ Currently the API only supports the following inputs
 - `jp` - romaji text
 - `en` - translated english text
 
-### Song Titles
-To add the song title and the anime where it came from to the lyrics, use the `show_title` argument
+### Song Title
+To add the song title, and anime title to the lyrics, use the `show_title` argument
 ```python
 import animelyrics
 
