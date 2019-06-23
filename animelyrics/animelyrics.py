@@ -7,6 +7,12 @@ import googlesearch
 __BASE_URL__ = "www.animelyrics.com"
 
 
+class NoLyricsFound(Exception):
+    """Exception class to handle no lyrics found"""
+
+    pass
+
+
 class MissingTranslatedLyrics(Exception):
     """Exception class to handle lyrics with missing translated lyrics"""
 
@@ -43,7 +49,7 @@ def search_lyrics(query, lang="jp", show_title=False):
     url = get_lyrics_url(query)
 
     if url is None:
-        return None
+        raise NoLyricsFound()
 
     soup = get_lyrics_soup(url)
 
